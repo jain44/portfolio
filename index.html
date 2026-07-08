@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO ─────────────────────────────────────────────── -->
+    <title>Jainam Jain | AI, Full-Stack &amp; Cybersecurity Developer — TCET Mumbai</title>
+    <meta
+      name="description"
+      content="Jainam Jain — B.Tech IT student at TCET Mumbai, 9.92 CGPA. Builds AI tools, full-stack web apps, and secure systems. Women's safety app, legal AI, enterprise frontends."
+    />
+    <meta name="author" content="Jainam Jain" />
+    <meta name="theme-color" content="#060816" />
+    <link rel="canonical" href="https://jainamjain.dev/" />
+
+    <!-- Open Graph ──────────────────────────────────────────────── -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jainamjain.dev/" />
+    <meta property="og:title" content="Jainam Jain | Developer — AI, Full-Stack &amp; Cybersecurity" />
+    <meta
+      property="og:description"
+      content="B.Tech IT at TCET Mumbai, 9.92 CGPA. Built a women's safety app for Chennai, a legal AI for rural India, and enterprise frontends. Design Director, TCET ACM."
+    />
+    <meta property="og:image" content="https://jainamjain.dev/og-image.png" />
+    <meta property="og:site_name" content="Jainam Jain" />
+
+    <!-- Twitter Card ────────────────────────────────────────────── -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jainam Jain | Developer — AI, Full-Stack &amp; Cybersecurity" />
+    <meta
+      name="twitter:description"
+      content="B.Tech IT at TCET Mumbai, 9.92 CGPA. Built a women's safety app for Chennai, a legal AI for rural India, and enterprise frontends."
+    />
+    <meta name="twitter:image" content="https://jainamjain.dev/og-image.png" />
+
+    <!-- Favicon ─────────────────────────────────────────────────── -->
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+    <!-- Fonts ───────────────────────────────────────────────────── -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles ──────────────────────────────────────────────────── -->
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Structured Data ─────────────────────────────────────────── -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jainam Jain",
+        "jobTitle": "B.Tech Information Technology Student",
+        "description": "AI, full-stack web, and cybersecurity developer. Design Director at TCET ACM Student Chapter, Mumbai.",
+        "url": "https://jainamjain.dev",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Thakur College of Engineering and Technology, Mumbai"
+        },
+        "sameAs": [
+          "https://github.com/jain44",
+          "https://linkedin.com/in/jainam-jain-746188263"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Skip Navigation ─────────────────────────────────────────── -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div class="noise" aria-hidden="true"></div>
+    <canvas class="particle-canvas" id="particleCanvas" aria-hidden="true"></canvas>
+    <div class="cursor cursor--outer" aria-hidden="true"></div>
+    <div class="cursor cursor--inner" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true">
+      <span id="scrollProgressBar"></span>
+    </div>
+
+    <!-- Header ──────────────────────────────────────────────────── -->
+    <header class="topbar" role="banner">
+      <a class="brand magnetic" href="#hero" aria-label="Jainam Jain — back to top">JJ</a>
+      <nav class="topnav" aria-label="Main navigation">
+        <a class="magnetic" href="#about">About</a>
+        <a class="magnetic" href="#skills">Skills</a>
+        <a class="magnetic" href="#projects">Projects</a>
+        <a class="magnetic" href="#contact">Contact</a>
+      </nav>
+      <a
+        class="button button--ghost button--sm magnetic topnav__resume"
+        href="./resume.pdf"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Download resume PDF"
+      >Resume ↓</a>
+    </header>
+
+    <!-- Main Content ────────────────────────────────────────────── -->
+    <main id="main-content">
+
+      <!-- ── Hero ─────────────────────────────────────────────── -->
+      <section class="hero section" id="hero" aria-labelledby="hero-heading">
+        <div class="hero__copy">
+          <p class="eyebrow reveal">Mumbai &middot; Available for Internships</p>
+          <h1 class="hero__title reveal" id="hero-heading">
+            Hi, I'm
+            <span>Jainam Jain</span>
+          </h1>
+          <p class="hero__subtitle reveal">
+            Specializing in&nbsp;<span
+              class="role-rotator"
+              id="roleRotator"
+              aria-live="polite"
+              aria-atomic="true"
+            >AI &amp; Machine Learning</span>
+          </p>
+          <p class="hero__summary reveal">
+            Third-year B.Tech IT student at TCET, Mumbai — 9.92 CGPA.
+            I've built a women's safety navigation app for Chennai, a multilingual
+            legal AI for rural India, and an enterprise role-based frontend —
+            while leading design at TCET ACM.
+          </p>
+          <div class="hero__actions reveal">
+            <a class="button button--primary magnetic" href="#projects">View My Projects</a>
+            <a class="button button--ghost magnetic" href="#contact">Get in Touch</a>
+          </div>
+          <div class="hero__stats reveal">
+            <article>
+              <strong>9.92</strong>
+              <span>CGPA at TCET</span>
+            </article>
+            <article>
+              <strong>11</strong>
+              <span>Projects built</span>
+            </article>
+            <article>
+              <strong>4</strong>
+              <span>Skill areas</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal" aria-hidden="true">
+          <div class="orbital-scene">
+            <div class="scene-backdrop">
+              <span class="scene-backdrop__planet"></span>
+              <span class="scene-backdrop__grid"></span>
+            </div>
+            <div class="orbital-core">
+              <span class="orbital-core__ring"></span>
+              <span class="orbital-core__ring orbital-core__ring--two"></span>
+            </div>
+            <div class="orbit orbit--one"><span>AI</span></div>
+            <div class="orbit orbit--two"><span>Web</span></div>
+            <div class="floating-card floating-card--one">
+              <p>Design Director</p>
+              <span>TCET ACM &mdash; Mumbai</span>
+            </div>
+            <div class="floating-card floating-card--two">
+              <p>9.92 CGPA</p>
+              <span>AI &middot; Web &middot; Security</span>
+            </div>
+            <div class="hero-character">
+              <div class="hero-character__glow"></div>
+              <img
+                src="./profile.jpg"
+                alt="Jainam Jain"
+                width="310"
+                height="310"
+              />
+            </div>
+            <div class="hero-character__label">
+              <p>Available for</p>
+              <p>Internships</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── About ─────────────────────────────────────────────── -->
+      <section class="about-intro section reveal" id="about" aria-labelledby="about-heading">
+        <div class="section-heading">
+          <p class="eyebrow">Background</p>
+          <h2 id="about-heading">I write code to solve problems I care about.</h2>
+        </div>
+        <p class="section-copy">
+          Third-year B.Tech IT student at TCET, Mumbai. I work across AI/ML, full-stack
+          web, and cybersecurity — three domains that increasingly overlap in real products.
+          I'm the Design Director at TCET ACM, which means I run visual communication for
+          one of Mumbai's larger student engineering communities. Outside tech, I've competed
+          in handball at the national level representing Maharashtra. I look for internships
+          where I can contribute from week one.
+        </p>
+      </section>
+
+      <!-- ── Journey ───────────────────────────────────────────── -->
+      <section class="storyboard section" aria-labelledby="journey-heading">
+        <div class="storyboard__sticky">
+          <p class="eyebrow">How I got here</p>
+          <h2 id="journey-heading">Design thinking first. Engineering second. Both together.</h2>
+          <p>
+            I didn't start with code — I started with how things look and feel.
+            That sequencing still shapes how I build: UX considerations inform
+            every architectural decision I make.
+          </p>
+        </div>
+
+        <div class="storyboard__chapters">
+          <article class="chapter-card reveal">
+            <span class="chapter-card__index">01</span>
+            <h3>Design First</h3>
+            <p>
+              Before writing serious code, I was designing interfaces and event
+              branding. Learning to think visually before thinking technically
+              changed how I approach engineering problems.
+            </p>
+          </article>
+
+          <article class="chapter-card reveal">
+            <span class="chapter-card__index">02</span>
+            <h3>The Language Stack</h3>
+            <p>
+              Python for data and AI. JavaScript and TypeScript for the web.
+              C/C++ for embedded systems. I picked up each one when I had a
+              real problem that needed it &mdash; not from a curriculum.
+            </p>
+          </article>
+
+          <article class="chapter-card reveal">
+            <span class="chapter-card__index">03</span>
+            <h3>Real Constraints</h3>
+            <p>
+              SafeRoute, JusticeAI, and Padmavati forced me to deal with real
+              product constraints &mdash; architecture decisions that have downstream
+              consequences, scope that doesn't stop growing, and users who
+              aren't you.
+            </p>
+          </article>
+
+          <article class="chapter-card reveal">
+            <span class="chapter-card__index">04</span>
+            <h3>Looking For</h3>
+            <p>
+              An internship where the work matters and the engineering bar is
+              high. I want to be around people who've shipped real products and
+              are willing to say why certain decisions were wrong.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ── Experience & Timeline ─────────────────────────────── -->
+      <section class="timeline section" id="experience" aria-labelledby="timeline-heading">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Experience &amp; Recognition</p>
+          <h2 id="timeline-heading">Academic rigor, leadership, and results.</h2>
+        </div>
+        <div class="timeline__line" aria-hidden="true"></div>
+        <div class="timeline__items">
+          <article class="timeline-card reveal">
+            <span class="timeline-card__dot" aria-hidden="true"></span>
+            <p class="timeline-card__year">2023 – Present</p>
+            <h3>B.Tech Information Technology — TCET, Mumbai</h3>
+            <p>
+              CGPA: 9.92. Core subjects include data structures, algorithms,
+              machine learning, computer networks, and cybersecurity. Expected
+              graduation: 2027.
+            </p>
+          </article>
+          <article class="timeline-card reveal">
+            <span class="timeline-card__dot" aria-hidden="true"></span>
+            <p class="timeline-card__year">2024 – Present</p>
+            <h3>Design Director — TCET ACM Student Chapter</h3>
+            <p>
+              Lead the design team producing event branding, social media, and
+              visual assets for one of Mumbai's largest student tech communities.
+              Coordinate across technical and marketing functions for every
+              major chapter event.
+            </p>
+          </article>
+          <article class="timeline-card reveal">
+            <span class="timeline-card__dot" aria-hidden="true"></span>
+            <p class="timeline-card__year">2024</p>
+            <h3>Graphic Design Intern — Sugamaya Governance, Mumbai</h3>
+            <p>
+              Designed social media graphics and digital creatives for
+              government-facing awareness campaigns. Delivered consistent
+              visual output across multiple concurrent campaign deliverables.
+            </p>
+          </article>
+          <article class="timeline-card reveal">
+            <span class="timeline-card__dot" aria-hidden="true"></span>
+            <p class="timeline-card__year">Select achievements</p>
+            <h3>Hackathons, Research, Competitions &amp; Sports</h3>
+            <ul class="achievement-list">
+              <li>Saavishkar 2026 &mdash; Hackathon Finalist</li>
+              <li>NL Mathematics Olympiad &mdash; Ranked 19th nationally</li>
+              <li>Data Vision Competition &mdash; 6th Place</li>
+              <li>Multicon 2025 &mdash; Co-authored Research Paper</li>
+              <li>Handball &mdash; Maharashtra Representative, National Level</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ── Featured Spotlight ──────────────────────────────── -->
+      <section class="featured-spotlight section" aria-labelledby="featured-heading">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Featured Work</p>
+          <h2 id="featured-heading">The projects I'd lead with.</h2>
+        </div>
+        <div class="spotlight-grid" id="spotlightGrid"></div>
+        <div class="spotlight-footer reveal">
+          <a class="button button--ghost magnetic" href="#projects">See all 11 projects &darr;</a>
+        </div>
+      </section>
+
+      <!-- ── Skills ────────────────────────────────────────────── -->
+      <section class="skills section" id="skills" aria-labelledby="skills-heading">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Technical Skills</p>
+          <h2 id="skills-heading">Languages, tools, and where I've used them.</h2>
+        </div>
+
+        <div class="skills__grid">
+          <article class="skill-card reveal tilt-card" data-strength="16">
+            <div class="skill-card__header">
+              <h3>Artificial Intelligence</h3>
+              <span>Advanced</span>
+            </div>
+            <div
+              class="skill-ring"
+              style="--progress: 88"
+              role="img"
+              aria-label="AI — Advanced"
+            >
+              <span aria-hidden="true">ML</span>
+            </div>
+            <p>
+              ML pipelines, deep learning, and LLM orchestration — applied
+              across fracture detection, IPL prediction, legal AI, and
+              agentic workflow projects.
+            </p>
+          </article>
+
+          <article class="skill-card reveal tilt-card" data-strength="18">
+            <div class="skill-card__header">
+              <h3>Web Development</h3>
+              <span>Advanced</span>
+            </div>
+            <div
+              class="skill-ring"
+              style="--progress: 92"
+              role="img"
+              aria-label="Web Development — Advanced"
+            >
+              <span aria-hidden="true">UI</span>
+            </div>
+            <p>
+              React, Next.js, Node.js, TypeScript, and vanilla JS — used
+              across client sites, enterprise role-based apps, and
+              data-driven tools.
+            </p>
+          </article>
+
+          <article class="skill-card reveal tilt-card" data-strength="14">
+            <div class="skill-card__header">
+              <h3>Cybersecurity</h3>
+              <span>Proficient</span>
+            </div>
+            <div
+              class="skill-ring"
+              style="--progress: 78"
+              role="img"
+              aria-label="Cybersecurity — Proficient"
+            >
+              <span aria-hidden="true">SEC</span>
+            </div>
+            <p>
+              Secure system design in software and hardware contexts —
+              IoT intrusion detection, access control, and security-first
+              architecture thinking.
+            </p>
+          </article>
+
+          <article class="skill-card reveal tilt-card" data-strength="20">
+            <div class="skill-card__header">
+              <h3>Design Leadership</h3>
+              <span>Advanced</span>
+            </div>
+            <div
+              class="skill-ring"
+              style="--progress: 94"
+              role="img"
+              aria-label="Design Leadership — Advanced"
+            >
+              <span aria-hidden="true">DIR</span>
+            </div>
+            <p>
+              Visual systems, brand direction, and team coordination as
+              Design Director — delivering consistent creative output at
+              scale across TCET ACM events.
+            </p>
+          </article>
+        </div>
+
+        <!-- Infinite scrolling marquee — two rows, opposite directions -->
+        <div class="marquee-wrapper reveal" aria-label="Technical skills and tools">
+          <div class="marquee-track marquee-track--fwd" aria-hidden="true">
+            <span>Python</span><span>C / C++</span><span>Java</span><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>HTML / CSS</span><span>Git</span><span>NumPy &middot; Pandas</span><span>Scikit-learn</span><span>LLM APIs</span><span>REST APIs</span><span>Arduino</span><span>Figma</span>
+            <!-- duplicate for seamless loop -->
+            <span>Python</span><span>C / C++</span><span>Java</span><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>HTML / CSS</span><span>Git</span><span>NumPy &middot; Pandas</span><span>Scikit-learn</span><span>LLM APIs</span><span>REST APIs</span><span>Arduino</span><span>Figma</span>
+          </div>
+          <div class="marquee-track marquee-track--rev" aria-hidden="true">
+            <span>Figma</span><span>Arduino</span><span>REST APIs</span><span>LLM APIs</span><span>Scikit-learn</span><span>NumPy &middot; Pandas</span><span>Git</span><span>HTML / CSS</span><span>Node.js</span><span>Next.js</span><span>React</span><span>TypeScript</span><span>JavaScript</span><span>Java</span><span>C / C++</span><span>Python</span>
+            <!-- duplicate for seamless loop -->
+            <span>Figma</span><span>Arduino</span><span>REST APIs</span><span>LLM APIs</span><span>Scikit-learn</span><span>NumPy &middot; Pandas</span><span>Git</span><span>HTML / CSS</span><span>Node.js</span><span>Next.js</span><span>React</span><span>TypeScript</span><span>JavaScript</span><span>Java</span><span>C / C++</span><span>Python</span>
+          </div>
+          <!-- Screen-reader accessible list -->
+          <ul class="sr-only">
+            <li>Python</li><li>C / C++</li><li>Java</li><li>JavaScript</li><li>TypeScript</li>
+            <li>React</li><li>Next.js</li><li>Node.js</li><li>HTML / CSS</li><li>Git</li>
+            <li>NumPy &amp; Pandas</li><li>Scikit-learn</li><li>LLM APIs</li><li>REST APIs</li>
+            <li>Arduino</li><li>Figma</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ── Projects ──────────────────────────────────────────── -->
+      <section class="projects section" id="projects" aria-labelledby="projects-heading">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Selected Builds</p>
+          <h2 id="projects-heading">11 projects. AI, full-stack web, and security.</h2>
+        </div>
+        <div class="project-grid" id="projectGrid" aria-label="Project list"></div>
+      </section>
+
+      <!-- ── Thoughts ──────────────────────────────────────────── -->
+      <section class="thoughts section" aria-labelledby="thoughts-heading">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Design Thoughts</p>
+          <h2 id="thoughts-heading">How I think about building things.</h2>
+        </div>
+        <div class="thoughts-grid">
+
+          <article class="thought-card reveal tilt-card" data-strength="10">
+            <span class="thought-card__tag">Design</span>
+            <h3>Design thinking made me a better engineer.</h3>
+            <p>
+              I didn't start with code — I started with how things look and feel.
+              That sequencing still shapes how I build: UX considerations inform
+              every architectural decision I make. The best engineering decisions
+              are almost always also the best design decisions.
+            </p>
+          </article>
+
+          <article class="thought-card reveal tilt-card" data-strength="10">
+            <span class="thought-card__tag">AI</span>
+            <h3>LLMs are infrastructure, not magic.</h3>
+            <p>
+              The hard part of building with LLMs isn't the API call — it's structured
+              output, failure handling, and designing systems that behave predictably
+              when the model doesn't. Responsible AI output design is non-negotiable
+              when users make real decisions from model responses.
+            </p>
+          </article>
+
+          <article class="thought-card reveal tilt-card" data-strength="10">
+            <span class="thought-card__tag">Building</span>
+            <h3>Ship for the failure case, not the happy path.</h3>
+            <p>
+              Every meaningful project I've built — a women's safety app, a legal AI
+              for rural India — forced me to think about what happens when things go
+              wrong. Safety-critical product design starts with the failure scenario,
+              not the happy path.
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ── Contact ───────────────────────────────────────────── -->
+      <section class="contact section" id="contact" aria-labelledby="contact-heading">
+        <div class="contact__panel reveal">
+          <div class="contact__copy">
+            <p class="eyebrow">Get In Touch</p>
+            <h2 id="contact-heading">
+              If you're hiring or building something interesting — reach out.
+            </h2>
+            <p>
+              I'm looking for software engineering internships in AI, full-stack,
+              or product engineering. Based in Mumbai. Open to in-person or remote.
+              Response time: under 24 hours.
+            </p>
+            <div class="social-links" id="socialLinks"></div>
+          </div>
+          <!-- Replace REPLACE_WITH_FORMSPREE_ID with your actual Formspree endpoint. -->
+          <!-- Sign up free at formspree.io — takes 2 minutes.                        -->
+          <form
+            class="contact-form"
+            id="contactForm"
+            action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID"
+            method="POST"
+            novalidate
+          >
+            <label>
+              <span>Name</span>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your name"
+                required
+                autocomplete="name"
+              />
+            </label>
+            <label>
+              <span>Email</span>
+              <input
+                type="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+                autocomplete="email"
+              />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="e.g. I have an internship opening on our AI team — here's what we're building..."
+                required
+              ></textarea>
+            </label>
+            <button
+              class="button button--primary magnetic"
+              type="submit"
+              id="formSubmitBtn"
+            >
+              Send Message
+            </button>
+            <p
+              class="form-note"
+              id="formNote"
+              role="status"
+              aria-live="polite"
+            >
+              What's the role or project?
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer ──────────────────────────────────────────────────── -->
+    <footer class="site-footer" role="contentinfo">
+      <p class="site-footer__copy">&copy; 2026 Jainam Jain &mdash; Built with HTML, CSS &amp; JS</p>
+      <nav class="site-footer__nav" aria-label="Footer links">
+        <a href="https://github.com/jain44" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://github.com/jain44/portfolio" target="_blank" rel="noreferrer">Portfolio Repo</a>
+        <a href="https://linkedin.com/in/jainam-jain-746188263" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="mailto:jainamjain1116@gmail.com">Email</a>
+      </nav>
+    </footer>
+
+    <!-- Project Modal ───────────────────────────────────────────── -->
+    <div
+      class="modal"
+      id="projectModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalHeading"
+      aria-hidden="true"
+    >
+      <div class="modal__backdrop" data-close-modal="true"></div>
+      <div class="modal__dialog">
+        <button
+          class="modal__close magnetic"
+          type="button"
+          data-close-modal="true"
+          aria-label="Close project details"
+        >&#x2715; Close</button>
+        <div class="modal__content" id="modalContent"></div>
+      </div>
+    </div>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
