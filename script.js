@@ -122,6 +122,7 @@ const profile = {
       id: "agentic-biz-sim",
       title: "Business Strategy Simulator",
       category: "Business Simulation",
+      preview: "assets/preview-biz-sim.png",
       github: "",
       demo: "",
       summary:
@@ -141,6 +142,7 @@ const profile = {
       id: "samyak",
       title: "Samyak",
       category: "Culture / Web",
+      preview: "assets/preview-samyak.png",
       github: "",
       demo: "",
       summary:
@@ -181,6 +183,7 @@ const profile = {
       id: "ai-presentation",
       title: "AI Slide Generator",
       category: "AI / Productivity",
+      preview: "assets/preview-presentation.png",
       github: "",
       demo: "",
       summary:
