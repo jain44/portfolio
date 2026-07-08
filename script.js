@@ -358,9 +358,9 @@ function renderProjects() {
             class="button button--ghost magnetic"
             type="button"
             data-open-project="${project.id}"
-            aria-label="View details for ${project.title}"
+            aria-label="View ${project.title} on GitHub"
           >
-            View Details
+            View on GitHub
           </button>
           ${project.github ? `<a class="project-card__icon-link" href="${project.github}" target="_blank" rel="noreferrer" aria-label="${project.title} source on GitHub" title="GitHub">&#128279;</a>` : ""}
           ${project.demo ? `<a class="project-card__icon-link" href="${project.demo}" target="_blank" rel="noreferrer" aria-label="${project.title} live demo" title="Live demo">&#9654;</a>` : ""}
@@ -692,9 +692,9 @@ function renderFeaturedSpotlight() {
               class="button button--primary magnetic spotlight-card__cta"
               type="button"
               data-open-project="${project.id}"
-              aria-label="View details for ${project.title}"
+              aria-label="View ${project.title} on GitHub"
             >
-              View Details &rarr;
+              View on GitHub &rarr;
             </button>
           </div>
         </article>
@@ -737,8 +737,12 @@ function setupModalEvents() {
   document.addEventListener("click", (e) => {
     const trigger = e.target.closest("[data-open-project]");
     if (trigger) {
-      lastOpenedTrigger = trigger;
-      openProjectModal(trigger.dataset.openProject);
+      const projectId = trigger.dataset.openProject;
+      const project = profile.projects.find((p) => p.id === projectId);
+      if (project) {
+        const url = project.github || "https://github.com/jain44";
+        window.open(url, "_blank", "noopener,noreferrer");
+      }
       return;
     }
     if (e.target.closest("[data-close-modal='true']")) {
