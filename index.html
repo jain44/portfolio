@@ -497,13 +497,15 @@
             </p>
             <div class="social-links" id="socialLinks"></div>
           </div>
-          <!-- Replace REPLACE_WITH_FORMSPREE_ID with your actual Formspree endpoint. -->
-          <!-- Sign up free at formspree.io — takes 2 minutes.                        -->
+          <!-- EmailJS config — fill in after creating your account at emailjs.com -->
+          <!-- SERVICE_ID: from EmailJS dashboard → Email Services           -->
+          <!-- TEMPLATE_ID: from EmailJS dashboard → Email Templates         -->
+          <!-- PUBLIC_KEY: from EmailJS dashboard → Account → API Keys       -->
           <form
             class="contact-form"
             id="contactForm"
-            action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID"
-            method="POST"
+            data-emailjs-service="service_p1m7js5"
+            data-emailjs-template="template_oiifm04"
             novalidate
           >
             <label>
@@ -587,6 +589,14 @@
       </div>
     </div>
 
-    <script src="./script.js?v=1.1" defer></script>
+    <!-- EmailJS SDK (free email sending for static sites) -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      // Replace with your actual Public Key from emailjs.com → Account → API Keys
+      (function () {
+        emailjs.init({ publicKey: "cWCzXqfhF545Z8Mnq" });
+      })();
+    </script>
+    <script src="./script.js?v=1.2" defer></script>
   </body>
 </html>

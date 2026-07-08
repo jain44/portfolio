@@ -782,8 +782,8 @@ function setupModalEvents() {
 }
 
 // ─── CONTACT FORM ────────────────────────────────────────────────────────────
-// Submits to Formspree when configured. Falls back to mailto: otherwise.
-// Sign up at formspree.io (free), replace REPLACE_WITH_FORMSPREE_ID in index.html.
+// Submits via EmailJS when configured. Falls back to mailto: otherwise.
+// Sign up free at emailjs.com, then fill in the three placeholders in index.html.
 
 function setupContactForm() {
   if (!contactForm) return;
@@ -791,45 +791,58 @@ function setupContactForm() {
   contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const isFormspreeConfigured =
-      !contactForm.action.includes("REPLACE_WITH_FORMSPREE_ID");
+    const serviceId  = contactForm.dataset.emailjsService  || "";
+    const templateId = contactForm.dataset.emailjsTemplate || "";
+    const isEmailJsConfigured =
+      serviceId  && !serviceId.includes("REPLACE") &&
+      templateId && !templateId.includes("REPLACE") &&
+      typeof emailjs !== "undefined";
+
     const formData = new FormData(contactForm);
+    const name    = String(formData.get("name")    || "").trim();
+    const email   = String(formData.get("email")   || "").trim();
+    const message = String(formData.get("message") || "").trim();
 
     if (formSubmitBtn) {
       formSubmitBtn.disabled = true;
       formSubmitBtn.textContent = "Sending…";
     }
-    formNote.classList.remove("form-note--success", "form-note--error");
+    if (formNote) formNote.classList.remove("form-note--success", "form-note--error");
 
-    if (isFormspreeConfigured) {
+    if (isEmailJsConfigured) {
       try {
-        const res = await fetch(contactForm.action, {
-          method: "POST",
-          body: formData,
-          headers: { Accept: "application/json" },
-        });
-        if (res.ok) {
-          formNote.textContent = "Message sent — I'll get back to you soon.";
+        await emailjs.send(serviceId, templateId, { name, email, message });
+        if (formNote) {
+          formNote.textContent = "Message sent — I'll get back to you soon! 🎉";
           formNote.classList.add("form-note--success");
-          contactForm.reset();
-        } else {
-          throw new Error("Submission failed");
         }
-      } catch {
-        formNote.textContent =
-          "Something went wrong. Email me directly at jainamjain1116@gmail.com";
-        formNote.classList.add("form-note--error");
+        contactForm.reset();
+      } catch (err) {
+        console.error("EmailJS error:", err);
+        if (formNote) {
+          formNote.textContent =
+            "Something went wrong. Email me directly at jainamjain1116@gmail.com";
+          formNote.classList.add("form-note--error");
+        }
       }
     } else {
-      // Formspree not configured — fall back to mailto
-      const name    = encodeURIComponent(String(formData.get("name")    || ""));
-      const message = encodeURIComponent(String(formData.get("message") || ""));
-      const email   = encodeURIComponent(String(formData.get("email")   || ""));
-      window.open(
-        `mailto:jainamjain1116@gmail.com?subject=Portfolio contact&body=${message}%0A%0AFrom%3A ${name} (${email})`
-      );
-      formNote.textContent = "Opening your email client…";
-      formNote.classList.add("form-note--success");
+      // EmailJS not configured yet — fall back to mailto:
+      const encodedName    = encodeURIComponent(name);
+      const encodedEmail   = encodeURIComponent(email);
+      const encodedMessage = encodeURIComponent(message);
+      const mailtoHref =
+        `mailto:jainamjain1116@gmail.com` +
+        `?subject=${encodeURIComponent("Portfolio contact from " + name)}` +
+        `&body=${encodedMessage}%0A%0AFrom%3A ${encodedName} (${encodedEmail})`;
+
+      const a = document.createElement("a");
+      a.href = mailtoHref;
+      a.click(); // Trigger without window.open to avoid popup blockers
+
+      if (formNote) {
+        formNote.textContent = "Opening your email client…";
+        formNote.classList.add("form-note--success");
+      }
     }
 
     if (formSubmitBtn) {
@@ -838,6 +851,7 @@ function setupContactForm() {
     }
   });
 }
+
 
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 // renderFeaturedSpotlight must come before setupRevealAnimations so the
