@@ -469,12 +469,11 @@ main {
   position: absolute;
   border-radius: 50%;
   border: 1px dashed rgba(255, 255, 255, 0.12);
-  display: grid;
-  place-items: start center;
+  display: block;
 }
 
 .orbit span {
-  transform: translateY(-50%);
+  position: absolute;
   padding: 10px 16px;
   border-radius: 999px;
   background: rgba(7, 12, 31, 0.72);
@@ -483,6 +482,19 @@ main {
   color: #eff3ff;
   font-size: 0.9rem;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  white-space: nowrap;
+}
+
+.orbit span:nth-child(1) {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.orbit span:nth-child(2) {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .orbit--one {
@@ -491,16 +503,46 @@ main {
   animation: spin 13s linear infinite;
 }
 
+.orbit--one span {
+  animation: spin-reverse 13s linear infinite;
+}
+
 .orbit--two {
   width: 90%;
   aspect-ratio: 1;
   animation: spin 18s linear infinite reverse;
 }
 
+.orbit--two span {
+  animation: spin-forward 18s linear infinite;
+}
+
 .orbit--three {
   width: 108%;
   aspect-ratio: 1;
   animation: spin 26s linear infinite;
+}
+
+.orbit--three span {
+  animation: spin-reverse 26s linear infinite;
+}
+
+@keyframes spin-reverse {
+  from {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+@keyframes spin-forward {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 .floating-card {
