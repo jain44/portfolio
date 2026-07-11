@@ -500,48 +500,48 @@ main {
 .orbit--one {
   width: 72%;
   aspect-ratio: 1;
-  animation: spin 13s linear infinite;
+  animation: spin-rotate 13s linear infinite;
 }
 
 .orbit--one span {
-  animation: spin-reverse 13s linear infinite;
+  animation: spin-rotate-reverse 13s linear infinite;
 }
 
 .orbit--two {
   width: 90%;
   aspect-ratio: 1;
-  animation: spin 18s linear infinite reverse;
+  animation: spin-rotate-reverse 18s linear infinite;
 }
 
 .orbit--two span {
-  animation: spin-forward 18s linear infinite;
+  animation: spin-rotate 18s linear infinite;
 }
 
 .orbit--three {
   width: 108%;
   aspect-ratio: 1;
-  animation: spin 26s linear infinite;
+  animation: spin-rotate 26s linear infinite;
 }
 
 .orbit--three span {
-  animation: spin-reverse 26s linear infinite;
+  animation: spin-rotate-reverse 26s linear infinite;
 }
 
-@keyframes spin-reverse {
+@keyframes spin-rotate {
   from {
-    transform: translate(-50%, -50%) rotate(360deg);
+    rotate: 0deg;
   }
   to {
-    transform: translate(-50%, -50%) rotate(0deg);
+    rotate: 360deg;
   }
 }
 
-@keyframes spin-forward {
+@keyframes spin-rotate-reverse {
   from {
-    transform: translate(-50%, -50%) rotate(0deg);
+    rotate: 360deg;
   }
   to {
-    transform: translate(-50%, -50%) rotate(360deg);
+    rotate: 0deg;
   }
 }
 
