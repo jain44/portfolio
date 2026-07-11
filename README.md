@@ -33,6 +33,7 @@ Deliberately framework-free to keep it fast, portable, and zero-dependency.
 
 | Project | Category | Stack |
 |---------|----------|-------|
+| Kavach: MSME Default Predictor | Fintech | React, FastAPI, XGBoost, SHAP |
 | AI Fracture Detection | Computer Vision | Python, Deep Learning |
 | JusticeAI | Legal Tech | LLM APIs, Python, NLP |
 | SafeRoute — OneJourney | Women's Safety | Node.js, Maps API |
@@ -40,7 +41,7 @@ Deliberately framework-free to keep it fast, portable, and zero-dependency.
 | RupeeReality | Fintech | JavaScript, Data Viz |
 | Agentic Business Strategy Simulator | AI/Productivity | LLM APIs, Python |
 
-[→ See all 14 projects in the portfolio](https://jainamjain.dev)
+[→ See all 12 projects in the portfolio](https://jainamjain.dev)
 
 ---
 

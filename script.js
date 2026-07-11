@@ -57,6 +57,27 @@ const profile = {
   ],
   projects: [
     {
+      id: "kavach",
+      title: "Kavach: MSME Default Predictor",
+      category: "Fintech",
+      featured: true,
+      preview: "",
+      github: "https://github.com/jain44/kavach",
+      demo: "",
+      summary:
+        "Comprehensive early warning system for predicting defaults in Micro, Small, and Medium Enterprises (MSMEs), developed for IDBI Innovate 2026. Combines a calibrated Machine Learning backend with a React dashboard.",
+      challenge:
+        "Financial default risk scoring requires highly accurate probability calibration, as raw model outputs don't reflect actual default rates. To solve this, the system integrates XGBoost with Isotonic Calibration to align risk scores and leverages SHAP to explain feature impacts to risk officers.",
+      impact:
+        "Designed a modular, decoupled full-stack architecture with FastAPI, React, and PostgreSQL. Created role-based dashboards with automated audit logs, interactive what-if simulation sandboxes, and a model governance layer tracking performance and demographic fairness.",
+      stack: ["React", "FastAPI", "Python", "XGBoost", "PostgreSQL", "SHAP", "TailwindCSS", "Docker"],
+      learnings: [
+        "Calibrated scoring is crucial in fintech to align model predictions with empirical default rates.",
+        "Explainable AI (XAI) is vital for high-stakes decision-making, helping risk officers understand the 'why' behind each score.",
+        "Containerized orchestration using Docker Compose ensures consistent environments across multi-service deployments."
+      ]
+    },
+    {
       id: "fracture",
       title: "AI Fracture Detection",
       category: "AI / Computer Vision",
