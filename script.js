@@ -61,7 +61,7 @@ const profile = {
       title: "Kavach: MSME Default Predictor",
       category: "Fintech",
       featured: true,
-      preview: "",
+      preview: "assets/preview-kavach.png",
       github: "https://github.com/jain44/kavach",
       demo: "",
       summary:
@@ -81,7 +81,7 @@ const profile = {
       id: "fracture",
       title: "AI Fracture Detection",
       category: "AI / Computer Vision",
-      featured: true,
+      featured: false,
       preview: "assets/preview-fracture.png",
       github: "",
       demo: "",
