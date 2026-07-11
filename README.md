@@ -2,7 +2,7 @@
 
 Personal portfolio showcasing projects in AI/ML, full-stack web development, and cybersecurity.
 
-🔗 **Live:** [jainamjain.dev](https://jainamjain.dev) ← *update once deployed*
+🔗 **Live:** [jain44.github.io/portfolio](https://jain44.github.io/portfolio)
 
 ---
 
@@ -41,7 +41,7 @@ Deliberately framework-free to keep it fast, portable, and zero-dependency.
 | RupeeReality | Fintech | JavaScript, Data Viz |
 | Agentic Business Strategy Simulator | AI/Productivity | LLM APIs, Python |
 
-[→ See all 12 projects in the portfolio](https://jainamjain.dev)
+[→ See all 12 projects in the portfolio](https://jain44.github.io/portfolio)
 
 ---
 
