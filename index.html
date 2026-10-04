@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary SEO ─────────────────────────────────────────────── -->
-    <title>Jainam Jain | AI, Full-Stack &amp; Cybersecurity Developer — TCET Mumbai</title>
+    <title>Jainam Jain | Full Stack &amp; GenAI Developer — TCET Mumbai</title>
     <meta
       name="description"
-      content="Jainam Jain — B.Tech IT student at TCET Mumbai, 9.92 CGPA. Builds AI tools, full-stack web apps, and secure systems. Women's safety app, legal AI, enterprise frontends."
+      content="Jainam Jain — B.Tech IT student at TCET Mumbai, 9.92 CGPA. Full Stack & GenAI Developer. Building scalable web apps, multi-agent AI systems, and financial risk models."
     />
     <meta name="author" content="Jainam Jain" />
     <meta name="theme-color" content="#060816" />
@@ -17,20 +17,20 @@
     <!-- Open Graph ──────────────────────────────────────────────── -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://jain44.github.io/portfolio/" />
-    <meta property="og:title" content="Jainam Jain | Developer — AI, Full-Stack &amp; Cybersecurity" />
+    <meta property="og:title" content="Jainam Jain | Full Stack &amp; GenAI Developer" />
     <meta
       property="og:description"
-      content="B.Tech IT at TCET Mumbai, 9.92 CGPA. Built a women's safety app for Chennai, a legal AI for rural India, and enterprise frontends. Design Director, TCET ACM."
+      content="B.Tech IT at TCET Mumbai, 9.92 CGPA. Full Stack Developer at Shreshth Sugamaya, API Web Developer at JP IT Staffing. Former Design Director, TCET ACM."
     />
     <meta property="og:image" content="https://jain44.github.io/portfolio/og-image.png" />
     <meta property="og:site_name" content="Jainam Jain" />
 
     <!-- Twitter Card ────────────────────────────────────────────── -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Jainam Jain | Developer — AI, Full-Stack &amp; Cybersecurity" />
+    <meta name="twitter:title" content="Jainam Jain | Full Stack &amp; GenAI Developer" />
     <meta
       name="twitter:description"
-      content="B.Tech IT at TCET Mumbai, 9.92 CGPA. Built a women's safety app for Chennai, a legal AI for rural India, and enterprise frontends."
+      content="B.Tech IT at TCET Mumbai, 9.92 CGPA. Full Stack Developer, GenAI builder, and former Design Director at TCET ACM."
     />
     <meta name="twitter:image" content="https://jain44.github.io/portfolio/og-image.png" />
 
@@ -54,8 +54,8 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Jainam Jain",
-        "jobTitle": "B.Tech Information Technology Student",
-        "description": "AI, full-stack web, and cybersecurity developer. Design Director at TCET ACM Student Chapter, Mumbai.",
+        "jobTitle": "Full Stack & GenAI Developer",
+        "description": "Full stack web developer and GenAI builder. Third-year B.Tech IT student at TCET Mumbai.",
         "url": "https://jain44.github.io/portfolio",
         "alumniOf": {
           "@type": "CollegeOrUniversity",
@@ -85,17 +85,53 @@
       <a class="brand magnetic" href="#hero" aria-label="Jainam Jain — back to top">JJ</a>
       <nav class="topnav" aria-label="Main navigation">
         <a class="magnetic" href="#about">About</a>
+        <a class="magnetic" href="#experience">Experience</a>
         <a class="magnetic" href="#skills">Skills</a>
         <a class="magnetic" href="#projects">Projects</a>
         <a class="magnetic" href="#contact">Contact</a>
       </nav>
-      <a
-        class="button button--ghost button--sm magnetic topnav__resume"
-        href="./resume.pdf"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Download resume PDF"
-      >Resume ↓</a>
+      <div class="resume-dropdown" id="resumeDropdown">
+        <button
+          class="resume-dropdown__toggle magnetic"
+          id="resumeDropdownBtn"
+          type="button"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Download or view resume options"
+        >
+          <span>Resume</span>
+          <span class="resume-dropdown__arrow" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="resume-dropdown__menu" id="resumeDropdownMenu" role="menu" aria-label="Resume versions">
+          <a
+            class="resume-dropdown__item"
+            href="./Jainam_Jain_1Page.pdf"
+            target="_blank"
+            rel="noreferrer"
+            role="menuitem"
+          >
+            <div class="resume-dropdown__item-header">
+              <span class="resume-dropdown__item-title">1-Page Resume</span>
+              <span class="resume-dropdown__badge">Compact</span>
+            </div>
+            <p class="resume-dropdown__item-desc">High-impact summary for quick recruiter screening</p>
+          </a>
+          <div class="resume-dropdown__divider" role="separator"></div>
+          <a
+            class="resume-dropdown__item"
+            href="./Jainam_Jain_2Page.pdf"
+            target="_blank"
+            rel="noreferrer"
+            role="menuitem"
+          >
+            <div class="resume-dropdown__item-header">
+              <span class="resume-dropdown__item-title">2-Page Resume</span>
+              <span class="resume-dropdown__badge resume-dropdown__badge--full">Detailed</span>
+            </div>
+            <p class="resume-dropdown__item-desc">Comprehensive work history, architectures &amp; awards</p>
+          </a>
+        </div>
+      </div>
     </header>
 
     <!-- Main Content ────────────────────────────────────────────── -->
@@ -115,17 +151,40 @@
               id="roleRotator"
               aria-live="polite"
               aria-atomic="true"
-            >AI &amp; Machine Learning</span>
+            >Full-Stack Web</span>
           </p>
           <p class="hero__summary reveal">
             Third-year B.Tech IT student at TCET, Mumbai — 9.92 CGPA.
-            I've built a women's safety navigation app for Chennai, a multilingual
-            legal AI for rural India, and an enterprise role-based frontend —
-            while leading design at TCET ACM.
+            Full Stack Web Developer at Shreshth Sugamaya Governance and API Web Developer at JP IT Staffing.
+            Building autonomous GenAI agents, calibrated financial default predictors, and enterprise full-stack platforms —
+            former Design Director at TCET ACM.
           </p>
           <div class="hero__actions reveal">
             <a class="button button--primary magnetic" href="#projects">View My Projects</a>
             <a class="button button--ghost magnetic" href="#contact">Get in Touch</a>
+          </div>
+          <div class="hero__resumes reveal">
+            <span class="hero__resumes-label">Resumes:</span>
+            <a
+              class="hero__resume-btn magnetic"
+              href="./Jainam_Jain_1Page.pdf"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Download 1-Page Resume PDF"
+            >
+              <span>1-Page PDF</span>
+              <small>Compact</small>
+            </a>
+            <a
+              class="hero__resume-btn hero__resume-btn--accent magnetic"
+              href="./Jainam_Jain_2Page.pdf"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Download 2-Page Resume PDF"
+            >
+              <span>2-Page PDF</span>
+              <small>Detailed</small>
+            </a>
           </div>
           <div class="hero__stats reveal">
             <article>
@@ -133,12 +192,12 @@
               <span>CGPA at TCET</span>
             </article>
             <article>
-              <strong>12</strong>
+              <strong>14</strong>
               <span>Projects built</span>
             </article>
             <article>
-              <strong>4</strong>
-              <span>Skill areas</span>
+              <strong>Top 20</strong>
+              <span>ELEVATE 2026</span>
             </article>
           </div>
         </div>
@@ -272,53 +331,69 @@
         <div class="timeline__items">
           <article class="timeline-card reveal">
             <span class="timeline-card__dot" aria-hidden="true"></span>
-            <p class="timeline-card__year">2024 – Present</p>
+            <p class="timeline-card__year">2024 – 2028</p>
             <h3>B.Tech Information Technology — TCET, Mumbai</h3>
             <p>
-              <strong>Minor in Artificial Intelligence</strong> &middot; CGPA: 9.92. 
-              Core subjects include data structures, algorithms, machine learning, 
-              computer networks, and cybersecurity. Expected graduation: 2028.
+              <strong>Minor Degree in Artificial Intelligence (2026 – 2028)</strong> &middot; CGPA: 9.92 / 10.
+              Specialized coursework across machine learning pipelines, deep learning, algorithms, 
+              distributed full-stack systems, and cybersecurity.
             </p>
           </article>
           <article class="timeline-card reveal">
             <span class="timeline-card__dot" aria-hidden="true"></span>
-            <p class="timeline-card__year">Aug 2026 – Nov 2026</p>
+            <p class="timeline-card__year">Aug 2026 – Present</p>
+            <h3>Full Stack Web Developer — Shreshth Sugamaya Governance LLP, Mumbai</h3>
+            <p>
+              Architecting a centralized Business Management Software (React.js, Node.js, Express.js, MongoDB) 
+              unifying sales, purchase, inventory, manufacturing, and service operations with role-based access control 
+              and dynamic Excel/PDF reporting. Developing an SEO-ready corporate web presence with validated enquiry workflows.
+            </p>
+          </article>
+          <article class="timeline-card reveal">
+            <span class="timeline-card__dot" aria-hidden="true"></span>
+            <p class="timeline-card__year">Jul 2026 – Present</p>
+            <h3>API Web Developer — JP IT Staffing LLC</h3>
+            <p>
+              Built an automated recruiter outreach pipeline (Python, Selenium, Gmail API, Pandas) delivering 
+              2,800+ emails across candidate profiles. Integrated OpenAI API to score 690+ job candidates against 
+              descriptions (215 high-priority at 75+/100) and generate role-tailored resumes with automated PDF generation.
+            </p>
+          </article>
+          <article class="timeline-card reveal">
+            <span class="timeline-card__dot" aria-hidden="true"></span>
+            <p class="timeline-card__year">Jul 2026 – Sep 2026</p>
+            <h3>Full Stack Engineer Intern — ApexPlanet Software Pvt Ltd</h3>
+            <p>
+              Developed and maintained full-stack web applications in an agile sprint cycle, building responsive 
+              frontend interfaces connected to backend RESTful APIs and optimized database schemas.
+            </p>
+          </article>
+          <article class="timeline-card reveal">
+            <span class="timeline-card__dot" aria-hidden="true"></span>
+            <p class="timeline-card__year">Jul 2026 – Sep 2026</p>
             <h3>Full Stack Intern — The Developers Arena</h3>
             <p>
-              Participate in a structured, self-paced internship building remote full-stack projects. 
-              Develop responsive frontend layouts, optimize backend application logic, and submit 
-              weekly code reviews to align with software development best practices.
-            </p>
-          </article>
-          <article class="timeline-card reveal">
-            <span class="timeline-card__dot" aria-hidden="true"></span>
-            <p class="timeline-card__year">Apr 2026 – Jun 2026</p>
-            <h3>Full Stack Web Development Intern — ApexPlanet Software</h3>
-            <p>
-              Build and deploy responsive web applications and features. Participate 
-              in full-stack development cycles, designing responsive frontend interfaces, 
-              optimizing backend logic, and managing database queries.
+              Built end-to-end web applications with HTML/CSS, JavaScript, and modern frameworks. Engineered 
+              responsive frontends integrated with REST APIs, reviewed for code quality, scalability, and clean architecture.
             </p>
           </article>
           <article class="timeline-card reveal">
             <span class="timeline-card__dot" aria-hidden="true"></span>
             <p class="timeline-card__year">Jun 2025 – Jun 2026</p>
-            <h3>Design Director — TCET ACM Student Chapter</h3>
+            <h3>Design Director — TCET ACM Student Chapter, Mumbai</h3>
             <p>
-              Lead the design team producing event branding, social media, and
-              visual assets for one of Mumbai's largest student tech communities.
-              Coordinate across technical and marketing functions for every
-              major chapter event.
+              Led the design team creating event branding and digital communications for one of Mumbai's largest student 
+              tech chapters. Core committee member in a year honored with an Honourable Mention at ACM India Outstanding Chapter 
+              Website Awards 2025 and hosting INNOVGENIUS 2026 (770+ participants).
             </p>
           </article>
           <article class="timeline-card reveal">
             <span class="timeline-card__dot" aria-hidden="true"></span>
-            <p class="timeline-card__year">Nov 2025 – Present</p>
-            <h3>Graphic Design Intern — Sugamaya Governance, Mumbai</h3>
+            <p class="timeline-card__year">Nov 2025 – Jul 2026</p>
+            <h3>Graphic Design Intern — Shreshth Sugamaya Governance LLP, Mumbai</h3>
             <p>
-              Designed social media graphics and digital creatives for
-              government-facing awareness campaigns. Delivered consistent
-              visual output across multiple concurrent campaign deliverables.
+              Designed digital brand creatives, presentation decks, and social media visual assets for 
+              organizational outreach and public-sector awareness initiatives.
             </p>
           </article>
           <article class="timeline-card reveal">
@@ -326,13 +401,50 @@
             <p class="timeline-card__year">Select achievements</p>
             <h3>Hackathons, Research, Competitions &amp; Sports</h3>
             <ul class="achievement-list">
-              <li>Saavishkar 2026 &mdash; Hackathon Finalist</li>
-              <li>NL Mathematics Olympiad &mdash; Ranked 19th nationally</li>
-              <li>Data Vision Competition &mdash; 6th Place</li>
-              <li>Multicon 2025 &mdash; Co-authored Research Paper</li>
-              <li>Handball &mdash; Maharashtra Representative, National Level</li>
+              <li>18th of 1,200+ participants &mdash; ELEVATE 2026 (Ideakode, 24-hr solo hackathon)</li>
+              <li>26th of 1,300+ participants &mdash; Frontend Wars 2026 (Finalist)</li>
+              <li>Team Leader &mdash; Bharatiya Antariksh Hackathon 2026 (ISRO, Hack2skill)</li>
+              <li>Offline Round Finalist &mdash; Saavishkar 2026 (MPSTME, SVKM's NMIMS; presented JusticeAI)</li>
+              <li>Round 2 (top ~400 teams / 300,000+ registrations) &mdash; Adobe University Hackathon 2026</li>
+              <li>Interview Round &mdash; DevFusion 3.0 (Enginow &mdash; IIT Bombay)</li>
+              <li>College Selection &mdash; Smart India Hackathon 2026 Internal Hackathon</li>
+              <li>Ranked 19th Nationally &mdash; National Level Mathematics Olympiad (NLMO)</li>
+              <li>6th Position &mdash; Data Vision Competition</li>
+              <li>Presented Research Paper &mdash; Multicon 2026</li>
+              <li>State Level Athlete &mdash; Represented Maharashtra in Handball</li>
             </ul>
           </article>
+        </div>
+
+        <!-- Timeline Resume Banner -->
+        <div class="timeline-resume-banner reveal">
+          <div class="timeline-resume-banner__copy">
+            <h3>Looking for the complete resume?</h3>
+            <p>
+              Download my updated 1-page compact summary for rapid screening or the full 2-page CV detailing 
+              all roles, technical architectures, and leadership achievements.
+            </p>
+          </div>
+          <div class="timeline-resume-banner__actions">
+            <a
+              class="timeline-resume-banner__btn button button--ghost magnetic"
+              href="./Jainam_Jain_1Page.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>1-Page Resume (PDF) &darr;</span>
+              <small>Concise recruiter summary</small>
+            </a>
+            <a
+              class="timeline-resume-banner__btn button button--primary magnetic"
+              href="./Jainam_Jain_2Page.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>2-Page Resume (PDF) &darr;</span>
+              <small>Complete engineering CV</small>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -344,7 +456,7 @@
         </div>
         <div class="spotlight-grid" id="spotlightGrid"></div>
         <div class="spotlight-footer reveal">
-          <a class="button button--ghost magnetic" href="#projects">See all 12 projects &darr;</a>
+          <a class="button button--ghost magnetic" href="#projects">See all 14 projects &darr;</a>
         </div>
       </section>
 
@@ -440,21 +552,21 @@
         <!-- Infinite scrolling marquee — two rows, opposite directions -->
         <div class="marquee-wrapper reveal" aria-label="Technical skills and tools">
           <div class="marquee-track marquee-track--fwd" aria-hidden="true">
-            <span>Python</span><span>C / C++</span><span>Java</span><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>HTML / CSS</span><span>Git</span><span>NumPy &middot; Pandas</span><span>Scikit-learn</span><span>LLM APIs</span><span>REST APIs</span><span>Arduino</span><span>Figma</span>
+            <span>Python</span><span>TypeScript</span><span>JavaScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>FastAPI</span><span>LangGraph</span><span>Groq</span><span>PostgreSQL</span><span>MongoDB</span><span>Supabase</span><span>Docker</span><span>Git</span><span>LLM APIs</span><span>REST APIs</span><span>NumPy &middot; Pandas</span><span>Figma</span>
             <!-- duplicate for seamless loop -->
-            <span>Python</span><span>C / C++</span><span>Java</span><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>HTML / CSS</span><span>Git</span><span>NumPy &middot; Pandas</span><span>Scikit-learn</span><span>LLM APIs</span><span>REST APIs</span><span>Arduino</span><span>Figma</span>
+            <span>Python</span><span>TypeScript</span><span>JavaScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>FastAPI</span><span>LangGraph</span><span>Groq</span><span>PostgreSQL</span><span>MongoDB</span><span>Supabase</span><span>Docker</span><span>Git</span><span>LLM APIs</span><span>REST APIs</span><span>NumPy &middot; Pandas</span><span>Figma</span>
           </div>
           <div class="marquee-track marquee-track--rev" aria-hidden="true">
-            <span>Figma</span><span>Arduino</span><span>REST APIs</span><span>LLM APIs</span><span>Scikit-learn</span><span>NumPy &middot; Pandas</span><span>Git</span><span>HTML / CSS</span><span>Node.js</span><span>Next.js</span><span>React</span><span>TypeScript</span><span>JavaScript</span><span>Java</span><span>C / C++</span><span>Python</span>
+            <span>Figma</span><span>NumPy &middot; Pandas</span><span>REST APIs</span><span>LLM APIs</span><span>Git</span><span>Docker</span><span>Supabase</span><span>MongoDB</span><span>PostgreSQL</span><span>Groq</span><span>LangGraph</span><span>FastAPI</span><span>Node.js</span><span>Next.js</span><span>React</span><span>JavaScript</span><span>TypeScript</span><span>Python</span>
             <!-- duplicate for seamless loop -->
-            <span>Figma</span><span>Arduino</span><span>REST APIs</span><span>LLM APIs</span><span>Scikit-learn</span><span>NumPy &middot; Pandas</span><span>Git</span><span>HTML / CSS</span><span>Node.js</span><span>Next.js</span><span>React</span><span>TypeScript</span><span>JavaScript</span><span>Java</span><span>C / C++</span><span>Python</span>
+            <span>Figma</span><span>NumPy &middot; Pandas</span><span>REST APIs</span><span>LLM APIs</span><span>Git</span><span>Docker</span><span>Supabase</span><span>MongoDB</span><span>PostgreSQL</span><span>Groq</span><span>LangGraph</span><span>FastAPI</span><span>Node.js</span><span>Next.js</span><span>React</span><span>JavaScript</span><span>TypeScript</span><span>Python</span>
           </div>
           <!-- Screen-reader accessible list -->
           <ul class="sr-only">
-            <li>Python</li><li>C / C++</li><li>Java</li><li>JavaScript</li><li>TypeScript</li>
-            <li>React</li><li>Next.js</li><li>Node.js</li><li>HTML / CSS</li><li>Git</li>
-            <li>NumPy &amp; Pandas</li><li>Scikit-learn</li><li>LLM APIs</li><li>REST APIs</li>
-            <li>Arduino</li><li>Figma</li>
+            <li>Python</li><li>TypeScript</li><li>JavaScript</li><li>React</li><li>Next.js</li>
+            <li>Node.js</li><li>FastAPI</li><li>LangGraph</li><li>Groq</li><li>PostgreSQL</li>
+            <li>MongoDB</li><li>Supabase</li><li>Docker</li><li>Git</li><li>LLM APIs</li>
+            <li>REST APIs</li><li>NumPy &amp; Pandas</li><li>Figma</li>
           </ul>
         </div>
       </section>
@@ -463,7 +575,7 @@
       <section class="projects section" id="projects" aria-labelledby="projects-heading">
         <div class="section-heading reveal">
           <p class="eyebrow">Selected Builds</p>
-          <h2 id="projects-heading">12 projects. AI, full-stack web, fintech, and security.</h2>
+          <h2 id="projects-heading">14 projects. AI, full-stack web, fintech, and security.</h2>
         </div>
         <div class="project-grid" id="projectGrid" aria-label="Project list"></div>
       </section>
@@ -591,8 +703,9 @@
     <footer class="site-footer" role="contentinfo">
       <p class="site-footer__copy">&copy; 2026 Jainam Jain &mdash; Built with HTML, CSS &amp; JS</p>
       <nav class="site-footer__nav" aria-label="Footer links">
+        <a href="./Jainam_Jain_1Page.pdf" target="_blank" rel="noreferrer">Resume (1-Page)</a>
+        <a href="./Jainam_Jain_2Page.pdf" target="_blank" rel="noreferrer">Resume (2-Page)</a>
         <a href="https://github.com/jain44" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://github.com/jain44/portfolio" target="_blank" rel="noreferrer">Portfolio Repo</a>
         <a href="https://linkedin.com/in/jainam-jain-746188263" target="_blank" rel="noreferrer">LinkedIn</a>
         <a href="mailto:jainamjain1116@gmail.com">Email</a>
       </nav>

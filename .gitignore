@@ -28,3 +28,6 @@ package-lock.json
 
 # Editor configs (optional: keep if you want to share settings)
 .vscode/settings.json
+
+# Agent workflows
+.agent/

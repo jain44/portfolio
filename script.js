@@ -78,6 +78,48 @@ const profile = {
       ]
     },
     {
+      id: "financial-crime-agent",
+      title: "Financial Crime Investigation Agent",
+      category: "Fintech",
+      featured: true,
+      preview: "",
+      github: "https://github.com/jain44",
+      demo: "",
+      summary:
+        "Explainable, human-in-the-loop AML & fraud investigation system developed for SIH PS-2. Combines ML anomaly detection with a LangGraph multi-tool agent that gathers evidence across transaction, KYC, and complaint graphs.",
+      challenge:
+        "Financial crime investigation requires strict determinism. An LLM cannot be allowed to hallucinate charges or scores. To solve this, the risk score is computed by ML and deterministic rules, while the LangGraph agent gathers evidence across 4 distinct data tools to generate auditable analyst reports.",
+      impact:
+        "Empowers financial crime analysts with NetworkX link analysis and verifiable audit trails, synthesizing complex graph data into an actionable Escalate, Human Review, or Close recommendation.",
+      stack: ["LangGraph", "FastAPI", "React", "NetworkX", "Python ML", "LLM APIs"],
+      learnings: [
+        "Decoupling deterministic scoring from generative reasoning is essential in high-stakes regulatory applications.",
+        "Network graph link analysis provides instant visual transparency into shell company clustering.",
+        "Human-in-the-loop workflows accelerate analyst throughput while preserving governance accountability."
+      ]
+    },
+    {
+      id: "growth-os",
+      title: "GrowthOS — AI Growth Operating System",
+      category: "AI / Productivity",
+      featured: true,
+      preview: "",
+      github: "https://github.com/jain44",
+      demo: "",
+      summary:
+        "Autonomous AI growth operating system for e-commerce brands where 7 parallel AI agents analyze finance, marketing, operations, tech, unit economics, inventory, and retention to generate unified diagnoses.",
+      challenge:
+        "Orchestrating 7 domain-specific AI agents concurrently without latency bottlenecks, then synthesizing disparate diagnostic metrics into coherent executive-level strategy simulations and automated PDF reports.",
+      impact:
+        "Built a complete SaaS platform featuring Auth.js (credentials + Google OAuth), onboarding wizard, interactive KPI dashboards, scenario stress simulators, and downloadable executive strategy dossiers.",
+      stack: ["Next.js 15", "TypeScript", "Prisma", "Supabase", "Auth.js", "Groq Llama 3.3"],
+      learnings: [
+        "Multi-agent parallelization dramatically reduces holistic business diagnostic time compared to sequential pipelines.",
+        "Strict schema validation with Groq Llama 3.3 ensures predictable, parseable JSON payloads for analytics dashboards.",
+        "Executive reporting requires clear visual hierarchy and actionable prescriptions over raw metrics."
+      ]
+    },
+    {
       id: "fracture",
       title: "AI Fracture Detection",
       category: "AI / Computer Vision",
@@ -104,19 +146,19 @@ const profile = {
       category: "Legal Tech",
       featured: true,
       preview: "assets/preview-justice.png",
-      github: "",
+      github: "https://github.com/jain44",
       demo: "",
       summary:
-        "Multilingual web app that gives Indian citizens plain-language guidance on their legal rights — in Hindi, Tamil, and other regional languages. Built to reduce the gap between legal literacy and legal access.",
+        "Multilingual legal co-pilot (English, Hindi, Marathi) that converts plain text, voice notes, or FIR photos into formal complaints and RTI applications with relevant laws and statutory timelines.",
       challenge:
-        "Indian legal information is doubly inaccessible: dense in language and siloed behind English. The challenge wasn't just building an LLM wrapper — it was designing output that's factually safe, locally contextualised, and understood by users with limited digital literacy.",
+        "Indian legal information is dense, procedurally complex, and siloed behind English. The challenge was building a reliable PWA with serverless Node/Express backend on Vercel utilizing Groq Llama 3.3 models with strict JSON validation and rate limiting.",
       impact:
-        "Proves that LLMs can serve equity goals in a developing-world context — but only when the output design is as carefully considered as the underlying model.",
-      stack: ["Python", "LLM APIs", "HTML/CSS/JS", "Multilingual NLP"],
+        "Offline Round Finalist at Saavishkar 2026 (NMIMS). Installable PWA with PDF generation, text-to-speech read-aloud, WhatsApp sharing, and a context-aware legal assistant.",
+      stack: ["Node.js", "Express", "Groq Llama 3.3", "Firebase", "Vercel", "PWA"],
       learnings: [
         "Localisation is not just translation — legal framing and cultural context differ significantly by region.",
-        "Responsible AI output design is non-negotiable when users make real decisions from AI responses.",
-        "Language accessibility expands reach far more than UI polish alone.",
+        "Responsible AI output design is non-negotiable when citizens make real decisions from AI responses.",
+        "Firebase Auth and Firestore synchronize citizen case histories smoothly across mobile and desktop devices.",
       ],
     },
     {
@@ -164,15 +206,15 @@ const profile = {
       title: "Samyak",
       category: "Culture / Web",
       preview: "assets/preview-samyak.png",
-      github: "",
+      github: "https://github.com/jain44",
       demo: "",
       summary:
-        "Personal project — an accessible digital archive of Jain spiritual teachings, built to make traditional knowledge navigable without requiring prior familiarity with the source texts.",
+        "Jain spiritual learning platform featuring daily concepts, 24 Tirthankara profiles, interactive stories, quizzes, AI chat assistant, and Supabase-backed authentication.",
       challenge:
-        "Digitising religious and cultural content involves more than structuring data — every design decision carries responsibility not to distort or decontextualise the source material.",
+        "Digitising traditional cultural and spiritual teachings with respect, modern UI responsiveness, and real-time interactive AI assistance powered by Supabase and React 19.",
       impact:
-        "A reminder that the most purposeful projects come from genuine connection to the subject matter, not from market research. Software can serve cultural preservation goals.",
-      stack: ["HTML/CSS", "JavaScript", "Content Architecture", "Interactive UX"],
+        "Accessible, responsive cultural education platform modernizing historical teachings for younger generations.",
+      stack: ["Next.js", "React 19", "TypeScript", "Supabase", "Tailwind CSS"],
       learnings: [
         "The most meaningful work tends to come from projects where you're also a genuine user.",
         "Digital accessibility can preserve cultural knowledge more durably than physical archives.",
@@ -733,10 +775,11 @@ function setupRoleRotator() {
   if (!el || prefersReducedMotion) return;
 
   const roles = [
-    "AI &amp; Machine Learning",
-    "Full-Stack Web",
-    "Cybersecurity",
-    "Design Systems",
+    "Full-Stack Web Development",
+    "GenAI &amp; Multi-Agent Systems",
+    "Fintech &amp; ML Architecture",
+    "Cybersecurity &amp; Systems",
+    "Design Systems &amp; UI/UX",
   ];
   let index = 0;
 
@@ -750,6 +793,38 @@ function setupRoleRotator() {
   };
 
   setInterval(rotate, 2800);
+}
+
+// ─── RESUME DROPDOWN ─────────────────────────────────────────────────────────
+
+function setupResumeDropdown() {
+  const dropdown = document.getElementById("resumeDropdown");
+  const btn = document.getElementById("resumeDropdownBtn");
+  if (!dropdown || !btn) return;
+
+  const setOpen = (open) => {
+    dropdown.classList.toggle("is-open", open);
+    btn.setAttribute("aria-expanded", String(open));
+  };
+
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = dropdown.classList.contains("is-open");
+    setOpen(!isOpen);
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!dropdown.contains(e.target)) {
+      setOpen(false);
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && dropdown.classList.contains("is-open")) {
+      setOpen(false);
+      btn.focus();
+    }
+  });
 }
 
 // ─── MODAL EVENTS ────────────────────────────────────────────────────────────
@@ -890,3 +965,4 @@ setupTiltCards();
 setupParticleCanvas();
 setupModalEvents();
 setupContactForm();
+setupResumeDropdown();

@@ -78,8 +78,12 @@ Without this step, the form falls back to opening the user's email client.
 
 ## Setup: Resume
 
-Add your resume PDF as `resume.pdf` in the project root.  
-The "Resume ↓" button in the navbar links to `./resume.pdf`.
+The portfolio supports both 1-page (compact) and 2-page (comprehensive) resumes:
+- `Jainam_Jain_1Page.pdf` — High-impact summary for rapid recruiter screening
+- `Jainam_Jain_2Page.pdf` — Full technical CV with detailed work history, architectures, and awards
+- `resume.pdf` — Default single-page resume for backward-compatible links
+
+The interactive topbar dropdown, hero quick chips, and experience banner link directly to both PDFs.
 
 ---
 
@@ -113,7 +117,9 @@ static-site/
 ├── styles.css          # All styles — design system, layout, animations
 ├── script.js           # All JS — data, rendering, interactions
 ├── profile.jpg         # Profile photo
-├── resume.pdf          # Your resume (add this file)
+├── Jainam_Jain_1Page.pdf # 1-page compact resume
+├── Jainam_Jain_2Page.pdf # 2-page detailed resume
+├── resume.pdf          # Default resume fallback (copy of 1-page)
 ├── favicon.svg         # SVG favicon
 ├── og-image.png        # Open Graph preview image (add this file — 1200×630px)
 ├── sitemap.xml         # SEO sitemap
